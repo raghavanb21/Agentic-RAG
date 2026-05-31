@@ -2,7 +2,14 @@
 
 An agentic Retrieval-Augmented Generation (RAG) system for AI concepts. It uses a LangGraph state machine to route user queries through one of four retrieval paths — local PDF corpus, ArXiv paper cache, an explicit blog URL, or direct LLM — with a jailbreak guard, prompt-injection filter per retrieved document, and Corrective-RAG (CRAG) grading with a single rewrite-and-retry. The final answer is streamed token-by-token to a Streamlit chat UI.
 
-## Architecture
+## Dashboard
+
+<img width="1403" height="783" alt="Screenshot 2026-05-30 at 6 39 11 PM" src="https://github.com/user-attachments/assets/660c8426-2414-4f00-a85d-626dffcbb50e" />
+
+## LangGraph Architecture
+
+<img width="732" height="1027" alt="image" src="https://github.com/user-attachments/assets/b338437f-3f2d-4355-a9c1-bd4862bd2d34" />
+
 
 The orchestrator (`llama-3.1-8b-instant` via Groq) selects one of four routes:
 
