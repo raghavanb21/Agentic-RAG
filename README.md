@@ -10,10 +10,12 @@ An agentic Retrieval-Augmented Generation (RAG) system for AI concepts. It uses 
 
 <img width="600" height="825" alt="image" src="https://github.com/user-attachments/assets/b338437f-3f2d-4355-a9c1-bd4862bd2d34" />
 
-GROQ_GUARD_MODEL: str = "meta-llama/llama-prompt-guard-2-86m"
-GROQ_FAST_MODEL: str = "llama-3.1-8b-instant"
-GROQ_MAIN_MODEL: str = "llama-3.3-70b-versatile"
-EMBED_MODEL: str = "BAAI/bge-base-en-v1.5"
+```env
+GROQ_GUARD_MODEL=meta-llama/llama-prompt-guard-2-86m
+GROQ_FAST_MODEL=llama-3.1-8b-instant
+GROQ_MAIN_MODEL=llama-3.3-70b-versatile
+EMBED_MODEL=BAAI/bge-base-en-v1.5
+```
 
 The orchestrator (`llama-3.1-8b-instant` via Groq) selects one of four routes:
 
