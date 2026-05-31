@@ -8,7 +8,7 @@ An agentic Retrieval-Augmented Generation (RAG) system for AI concepts. It uses 
 
 ## LangGraph Architecture
 
-<img width="732" height="1027" alt="image" src="https://github.com/user-attachments/assets/b338437f-3f2d-4355-a9c1-bd4862bd2d34" />
+<img width="600" height="825" alt="image" src="https://github.com/user-attachments/assets/b338437f-3f2d-4355-a9c1-bd4862bd2d34" />
 
 GROQ_GUARD_MODEL: str = "meta-llama/llama-prompt-guard-2-86m"
 GROQ_FAST_MODEL: str = "llama-3.1-8b-instant"
