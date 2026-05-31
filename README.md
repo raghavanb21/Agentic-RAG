@@ -10,6 +10,10 @@ An agentic Retrieval-Augmented Generation (RAG) system for AI concepts. It uses 
 
 <img width="732" height="1027" alt="image" src="https://github.com/user-attachments/assets/b338437f-3f2d-4355-a9c1-bd4862bd2d34" />
 
+GROQ_GUARD_MODEL: str = "meta-llama/llama-prompt-guard-2-86m"
+GROQ_FAST_MODEL: str = "llama-3.1-8b-instant"
+GROQ_MAIN_MODEL: str = "llama-3.3-70b-versatile"
+EMBED_MODEL: str = "BAAI/bge-base-en-v1.5"
 
 The orchestrator (`llama-3.1-8b-instant` via Groq) selects one of four routes:
 
@@ -38,21 +42,12 @@ chat input → normalize → jailbreak guard → orchestrator
 
 ```
 agentic-rag/
-├── .env                          # API keys
 ├── .env.example                  # template
 ├── requirements.txt              # dependencies
-├── commands.txt                  # step-by-step macOS setup
 ├── README.md                     # this file
 ├── CLAUDE.md                     # guidance for Claude Code
 ├── agents.md                     # single source of truth for all system prompts
 ├── app.py                        # Streamlit chat UI
-│
-├── data/
-│   ├── pdfs/                     # 3 AI-concepts PDFs
-│   ├── arxiv/                    # 3 ArXiv PDFs named arxiv_id.pdf
-│   ├── arxiv_index/
-│   │   └── doc_ids.json          # local map: arxiv_id → PageIndex doc_id (trees live in the cloud)
-│   └── chroma/                   # ChromaDB persistent store (auto-created)
 │
 ├── config/
 │   └── settings.py               # constants, model names, thresholds
@@ -79,8 +74,6 @@ agentic-rag/
 │
 ├── graph/
 │   ├── state.py                  # AgentState + Pydantic models
-│   ├── nodes.py                  # all node functions with @traceable + latency
-│   ├── edges.py                  # conditional edge logic
 │   └── graph.py                  # build_graph()
 │
 └── citations/
